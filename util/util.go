@@ -38,3 +38,7 @@ func sexec(cd string, args []string) (string, error){
 func Install(p pkg){
     p.Install()
 }
+
+func config(cmd string, args []string){
+    lexec(cmd, args)
+}

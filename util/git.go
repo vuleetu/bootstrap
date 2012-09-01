@@ -28,7 +28,3 @@ func (git *GitPkg) Install(){
     config("git",  []string{"config", "--global", "mergetool.vimdiff.keepbackup", "false"})
     config("git",  []string{"config", "--global", "mergetool.vimdiff.cmd", "vimdiff", `vim --noplugin "$PWD/$MERGED"         +":split $PWD/$REMOTE" +":set buftype=nowrite"         +":vertical diffsplit $PWD/$LOCAL" +":set buftype=nowrite"         +":vertical diffsplit $PWD/$BASE" +":set buftype=nowrite"         +":wincmd l"         +":nmap 1 :diffget BASE:diffupdate"         +":nmap 2 :diffget LOCAL:diffupdate"         +":nmap 3 :diffget REMOTE:diffupdate" github.user=vuleetu`})
 }
-
-func config(cmd string, args []string){
-    lexec(cmd, args)
-}
