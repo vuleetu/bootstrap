@@ -14,6 +14,8 @@ func  main() {
     util.Install(&vim)
     var chrome util.ChromePkg
     util.Install(&chrome)
+    var guake util.GuakePkg
+    util.Install(&guake)
 }
 
 
